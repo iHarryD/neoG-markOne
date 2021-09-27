@@ -2,14 +2,16 @@ const readLineSync = require("readline-sync");
 const questionsAnswers = {
   "What is my favorite food?": "Biryani",
   "Which phone OS do I prefer?": "iOS",
-  "What is my favorite movie genre?": "Mystery"
+  "What is my favorite movie genre?": "Mystery",
+  "What do I prefer more: hill stations or beach?": "Hill Stations",
+  "What is my favorite band?": "One Direction"
 }
 let currentScore = 0;
 let scoreboard = {};
 
 function theGame() {
   let username = readLineSync.question("Hello! May I ask you your name, please? ");
-  console.log(`Welcome, ${username}, to 'HOW WELL DO YOU KNOW HARRY?'.`);
+  console.log(`Welcome, ${username}, to 'HOW WELL DO YOU KNOW HARRY?'.\n`);
   for (question in questionsAnswers) {
     let userAnswer = readLineSync.question(`${question}\n`);
     if (userAnswer.toUpperCase() === questionsAnswers[question].toUpperCase()) {
